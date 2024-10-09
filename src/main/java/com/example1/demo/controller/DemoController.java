@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example1.demo.model.domain.Article;
 import com.example1.demo.model.domain.TestDB;
 import com.example1.demo.model.service.TestService;
-import com.example1.demo.model.service.blogService;
+import com.example1.demo.model.service.BlogService;
 
 
 
@@ -41,11 +41,9 @@ public String hello(Model model) {
         return "about_detailed";
     }
 
-@GetMapping("/article_list")
-    public String article_list(Model model) {
-        List<Article> list = blogService.findAll(); // 게시판 리스트
-        model.addAttribute("articles", list); // 모델에 추가
-        return "article_list"; // .HTML 연결
+    @GetMapping("/article_list") // 게시판 링크 지정
+    public String article_list() {
+    return "article_list"; // .HTML 연결
     }
 
 @GetMapping("/thymeleaf_test1")
