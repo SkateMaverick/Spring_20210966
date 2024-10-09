@@ -41,10 +41,10 @@ public String hello(Model model) {
         return "about_detailed";
     }
 
-    @GetMapping("/article_list") // 게시판 링크 지정
-    public String article_list() {
-    return "article_list"; // .HTML 연결
-    }
+    // @GetMapping("/article_list") // 게시판 링크 지정
+    // public String article_list() {
+    // return "article_list"; // .HTML 연결
+    // }
 
 @GetMapping("/thymeleaf_test1")
     public String thymeleaf_test1(Model model) {
