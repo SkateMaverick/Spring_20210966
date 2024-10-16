@@ -8,9 +8,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RestController // @Controller + @ResponseBody
-public class BlogRestController {
-private final BlogService BlogService;
 
+
+
+public class BlogRestController {
+        private final BlogService BlogService;
 
 @PostMapping("/api/articles")
     public ResponseEntity<Article> addArticle(@ModelAttribute AddArticleRequest request) {
