@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example1.demo.model.domain.Article;
 import com.example1.demo.model.domain.TestDB;
 import com.example1.demo.model.service.TestService;
-import com.example1.demo.model.service.BlogService;
+import com.example1.demo.model.service.blogService;
 
 
 
