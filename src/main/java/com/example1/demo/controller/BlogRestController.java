@@ -1,7 +1,8 @@
 package com.example1.demo.controller;
+import org.springframework.web.bind.annotation.RestController;
 import com.example1.demo.model.domain.Article;
 import com.example1.demo.model.service.AddArticleRequest;
-import com.example1.demo.model.service.blogService;
+import com.example1.demo.model.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,9 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController // @Controller + @ResponseBody
 
 
-
 public class BlogRestController {
-        private final blogService BlogService;
+        private final BlogService BlogService;
 
 @PostMapping("/api/articles")
     public ResponseEntity<Article> addArticle(@ModelAttribute AddArticleRequest request) {
