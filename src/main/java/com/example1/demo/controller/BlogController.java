@@ -47,6 +47,12 @@ public class BlogController {
         return "article_edit"; // .HTML 연결
     }
 
+    @PutMapping("/api/article_edit/{id}")
+        public String updateArticle(@PathVariable Long id, @ModelAttribute AddArticleRequest request) {
+                blogService.update(id, request);
+        return "redirect:/article_list"; // 글 수정 이후 .html 연결
+    }
+
     @DeleteMapping("/api/article_delete/{id}")
         public String deleteArticle(@PathVariable Long id) {
             blogService.delete(id);
