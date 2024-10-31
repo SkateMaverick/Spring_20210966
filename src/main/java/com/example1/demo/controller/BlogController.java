@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
 import com.example1.demo.model.service.AddArticleRequest;
-import com.example1.demo.model.service.BlogService;
+import com.example1.demo.model.service.blogService;
 import com.example1.demo.model.domain.Article;
 
 @Controller
 
 public class BlogController {
     @Autowired
-    BlogService blogService;
+    blogService blogService;
 
 /*************  ✨ Codeium Command ⭐  *************/
     /**
